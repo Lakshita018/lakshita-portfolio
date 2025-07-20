@@ -5,45 +5,47 @@ const educationData = [
   {
     title: "B.E. Computer Engineering",
     institution: "Thapar Institute of Engineering & Technology",
-    location: "Patiala, India",
+    location: "Patiala, Punjab, India",
     duration: "Aug 2021 - Present",
     description:
-      "Focused on core computer science subjects including Data Structures, Machine Learning, and Software Development.",
+      "Pursuing core subjects like Data Structures, Machine Learning, and Full-Stack Development.",
     current: true,
     details: [
-      "Coursework: Data Structures, Machine Learning, Software Development",
-      "CGPA: 8.5/10",
-      "Relevant Projects: AI Healthcare System, Web Development Portfolio"
+      "Coursework: Data Structures, Machine Learning, Full-Stack Development",
+      "CGPA: 8.95/10 (till current semester)",
+      "Relevant Projects: Portfolio Website,Chatbot"
     ]
+   
   },
   {
     title: "Class XII - CBSE",
-    institution: "XYZ Public School",
-    location: "Delhi, India",
-    duration: "2019 - 2021",
+    institution: "MCM Dav Public School",
+    location: "Pathankot, India",
+    duration: "2021 - 2023",
     description:
-      "Studied Physics, Chemistry, Mathematics, and Computer Science. Secured 95% overall.",
+      "Studied PCM with Computer Science, secured 95% overall with distinction in Computer Science.",
     current: false,
     details: [
-      "Subjects: Physics, Chemistry, Mathematics, Computer Science",
+      "Subjects: Physics, Chemistry, Mathematics, English",
       "Percentage: 95%",
-      "Achievements: School Topper in Computer Science"
+      "Achievements: Topper in school"
     ]
   },
   {
     title: "Class X - CBSE",
-    institution: "ABC High School",
-    location: "Delhi, India",
-    duration: "2017 - 2019",
+    institution: "St. Joseph's Convent Sec. School",
+    location: "Pathankot, India",
+    duration: "2010 - 2021",
     description: "Basic foundational education with focus on Science and Math.",
     current: false,
     details: [
       "Subjects: Science, Mathematics, English, Hindi, Social Studies",
-      "Percentage: 92%",
+      "Percentage: 97.4%",
       "Achievements: Merit Certificate in Mathematics"
     ]
   },
 ];
+
 
 const Education = () => {
   const [selected, setSelected] = useState(
