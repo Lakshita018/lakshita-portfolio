@@ -1,0 +1,267 @@
+.hero {
+  height: 100vh;
+   background-color: transparent;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+.hero > div:first-child {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.hero-content, .scroll-down {
+  position: relative;
+  z-index: 1;
+}
+#tsparticles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-content,
+.scroll-down {
+  position: relative;
+  z-index: 1;
+}
+
+
+.tagline {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #7f9ce8;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+h1 {
+  margin-top: 1.4rem;
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+}
+
+.highlight {
+  color: #4f8cff;
+}
+
+.typing-title {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 2.4rem;
+  font-weight: 700;
+  border-right: 3px solid #4f8cff;
+  animation:
+    typing 3s steps(17, end) 0.5s 1 normal both,
+    blinkCursor 0.75s step-end infinite;
+  color: #ddd;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 17ch; /* Exact width for "Computer Engineer" */
+  }
+}
+
+/* Cursor blinking */
+@keyframes blinkCursor {
+  0%, 100% {
+    border-color: #4f8cff;
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* .subtitle {
+  margin-top: 12px;
+  color: #c9c9c9;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  margin-top: 24px;
+} */
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 32px;
+  text-decoration: none;
+  margin: 8px;
+  display: inline-block;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+  font-size: 1rem;
+}
+
+.primary {
+  background-color: #4f8cff;
+  color: white;
+}
+
+.primary:hover {
+  background-color: #3470d1;
+}
+
+.secondary {
+  border: 2px solid #4f8cff;
+  color: #4f8cff;
+}
+
+.secondary:hover {
+  background-color: #4f8cff;
+  color: white;
+}
+
+/* Scroll Down animation */
+.scroll-down {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #ccc;
+  font-size: 0.9rem;
+ 
+}
+
+.mouse {
+  width: 24px;
+  height: 40px;
+  border: 2px solid #ccc;
+  border-radius: 14px;
+  margin: 8px auto 0;
+  position: relative;
+}
+
+.wheel {
+  width: 4px;
+  height: 8px;
+  background: #ccc;
+  border-radius: 4px;
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: wheelMove 1.4s infinite;
+}
+
+@keyframes wheelMove {
+  0% {
+    top: 6px;
+    opacity: 1;
+  }
+  100% {
+    top: 20px;
+    opacity: 0;
+  }
+}
+
+
+
+.subtitle {
+  margin-top: 12px;
+  color: #c9c9c9;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 1;
+  animation: none;
+}
+
+.hero-buttons {
+  margin-top: 24px;
+  opacity: 1;
+  animation: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* No translateX here */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.jump {
+  display: inline-block;
+  animation: jump 1.2s ease-in-out infinite;
+}
+
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px); /* jump height */
+  }
+}
+.bottom-bar {
+  position: absolute;
+  bottom: 32px;
+  left: 0;
+  width: 100%;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+/* Social buttons styled like toggle */
+.pill-social-icons {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 40px;
+  padding: 6px 12px;
+  gap: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pill-social-icons a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none; /* ✅ Removes underline */
+}
+
+.pill-social-icons a:hover {
+  background-color: #4f8cff;
+  transform: scale(1.1);
+}
+
+.pill-social-icons svg {
+  font-size: 2rem;
+}
