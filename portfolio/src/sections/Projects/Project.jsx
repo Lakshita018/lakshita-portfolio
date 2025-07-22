@@ -76,7 +76,7 @@ const Project = () => {
     : projects.filter(project => project.featured);
 
   return (
-    <section className="projects-section">
+    <section className="projects-section" id="projects">
       <div className="projects-container">
         <div className="projects-header">
           <span className="section-label">RECENT WORK</span>

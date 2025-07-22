@@ -71,7 +71,7 @@ const WorkAchievements = () => {
   ];
 
   return (
-    <section className="experience-section" ref={experienceRef}>
+    <section className="experience-section"  id="experience" ref={experienceRef}>
       <div className="experience-container">
         <div className="experience-header">
           <p className="experience-subtitle">Professional Journey</p>
