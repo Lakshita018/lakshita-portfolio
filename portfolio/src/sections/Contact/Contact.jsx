@@ -108,7 +108,7 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="contact-info-section">
             <div className="contact-info-card">
-              <h2 className="section-title">Contact Information</h2>
+              <h2 className="section-title1">Contact Information</h2>
               
               <div className="contact-details">
                 <div className="contact-item">
@@ -154,7 +154,7 @@ const Contact = () => {
 
             {/* Social Links */}
             <div className="social-card">
-              <h2 className="section-title">Connect With Me</h2>
+              <h2 className="section-title1">Connect With Me</h2>
               <div className="social-links">
                 <a href="https://github.com/Lakshita018" className="social-link">
                   <svg className="icon" fill="currentColor" viewBox="0 0 24 24">
@@ -178,7 +178,7 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="contact-form-section">
             <div className="contact-form-card">
-              <h2 className="section-title">Send Me a Message</h2>
+              <h2 className="section-title1">Send Me a Message</h2>
               
               <div className="contact-form">
                 <div className="form-row">
@@ -279,6 +279,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    
   );
 };
 

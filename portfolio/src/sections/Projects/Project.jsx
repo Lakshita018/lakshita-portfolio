@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import './Project.css';
-
+import DatesheetImg from './datesheet.jpeg';
+import Coll from './coll.jpg';
+import Web from './web.jpeg';
+import ai from './ai.jpeg';
+import ml from './ml.jpeg';
+import com from './com.jpeg';
 const Project = () => {
   const [activeFilter, setActiveFilter] = useState('Featured');
 
@@ -9,60 +14,60 @@ const Project = () => {
     id: 1,
     title: 'Datesheet Generator',
     description: 'A system that automates the creation of exam datesheets, seating plans, and teacher duty allocations using Python and Flask.',
-    image: '/api/placeholder/300/180',
+    image: DatesheetImg,
     featured: true,
     tags: ['Python', 'Flask', 'Jinja2', '+3 more'],
-    icon: '📚',
+    // icon: '📚',
     color: 'purple'
   },
   {
     id: 2,
     title: 'Colloquium Website',
     description: 'Developed the official website for the national Colloquium event, featuring registration, schedule, and results management.',
-    image: '/api/placeholder/300/180',
+    image: Coll,
     featured: true,
     tags: ['HTML', 'CSS', 'JavaScript', '+1 more'],
-    icon: '🌐',
+    // icon: '🌐',
     color: 'blue'
   },
   {
     id: 3,
     title: 'Web VIDA Quiz Platform',
     description: 'Built an interactive quiz platform for students to test knowledge and get instant feedback, deployed on the Web VIDA portal.',
-    image: '/api/placeholder/300/180',
+    image: Web,
     featured: true,
     tags: ['React', 'Node.js', 'Firebase', '+2 more'],
-    icon: '📝',
+    // icon: '📝',
     color: 'green'
   },
   {
     id: 4,
     title: 'AI Chatbot',
     description: 'Designed a conversational AI chatbot capable of answering FAQs and providing personalized support using NLP techniques.',
-    image: '/api/placeholder/300/180',
+    image: ai,
     featured: false,
     tags: ['Python', 'NLP', 'Machine Learning'],
-    icon: '🤖',
+    // icon: '🤖',
     color: 'red'
   },
   {
     id: 5,
     title: 'E-Commerce Platform',
     description: 'Full-stack online shopping solution with secure payment integration, product catalog, and order management system.',
-    image: '/api/placeholder/300/180',
+    image: com,
     featured: false,
     tags: ['React', 'Node.js', 'MongoDB'],
-    icon: '🛒',
+    // icon: '🛒',
     color: 'orange'
   },
   {
     id: 6,
     title: 'Diabetes Prediction using Fundus Images',
     description: 'Developed a deep learning model to predict Type 2 Diabetes Mellitus from retinal fundus images, demonstrating practical ML application in healthcare.',
-    image: '/api/placeholder/300/180',
+    image: ml,
     featured: false,
     tags: ['Python', 'Deep Learning', 'TensorFlow'],
-    icon: '🔬',
+    // icon: '🔬',
     color: 'cyan'
   }
 ];

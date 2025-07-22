@@ -8,7 +8,7 @@ import Experience from './sections/Experience/Experience';
 import Project from './sections/Projects/Project';
 import NeuralNetworkBG from './components/NeuralNetworkBG'; 
 import Contact from './sections/Contact/Contact';
-
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -27,6 +27,7 @@ function App() {
         <Skills />
         <Experience />
         <Contact />
+        <Footer />
       </main>
     </Router>
   );

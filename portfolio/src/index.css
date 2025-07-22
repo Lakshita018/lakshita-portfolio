@@ -11,5 +11,11 @@ html, body, #root {
   position: relative;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
-  background: transparent !important; /* ensures your canvas is visible */
+  background: transparent !important; /* 
+  ensures your canvas is visible */
+  
+}
+.page-wrapper {
+  padding-left: 48px;
+  padding-right: 48px;
 }

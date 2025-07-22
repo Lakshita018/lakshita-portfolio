@@ -6,15 +6,17 @@ const Navbar = () => {
     <header className="navbar">
       <div className="navbar__logo">Lakshita</div>
       <nav className="navbar__links">
-        <a href="#education">Education</a>
+       
+        <a href="#projects">Projects</a>
+         <a href="#education">Education</a>
         <a href="#experience">Experience</a>
        
         <a href="#skills">Skills</a>
-        
+        <a href="#contact">Contact</a>
       </nav>
       <div className="navbar__resume">
-        <a href="/assets/Your_Resume.pdf" download className="download-btn">
-          ⬇️Resume
+        <a href="/Lakshita_resume.pdf" download className="download-btn">
+          Resume
         </a>
       </div>
     </header>

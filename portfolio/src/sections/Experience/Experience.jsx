@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Experience.css';
 
-const Experience = () => {
+const WorkAchievements = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const experienceRef = useRef(null);
   const timelineRef = useRef(null);
@@ -32,58 +32,58 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      title: "Frontend Developer",
-      company: "ISTE Thapar Chapter",
-      duration: "January 2025 - April 2025",
-      logo: "/api/placeholder/80/80", // Replace with your logo path
+      title: "General Secretary",
+      company: "ISTE - Indian Society for Technical Education",
+      duration: "May 2025 - Present",
+      location: "Patiala, Punjab",
+      type: "Leadership Role",
+      logo: "🏛️",
       testimonial: {
-        text: "Lakshita played a pivotal role in designing and developing the Colloquium website with great attention to detail and performance. His interactive UI implementations and ability to adapt quickly to requirements significantly enhanced our event's digital presence.",
+        text: "Lakshita demonstrated exceptional leadership skills in managing technical divisions and organizing large-scale events. Her ability to deliver secure platforms and manage multiple workshops simultaneously showcased remarkable organizational capabilities.",
         rating: 5
       },
       responsibilities: [
-        "Developed and deployed a responsive and dynamic website for Colloquium using React.js and Tailwind CSS.",
-        "Integrated event registration, speaker line-up, and real-time updates functionalities to enhance user experience.",
-        "Led hands-on frontend development workshops for beginners, covering modern web development practices.",
-        "Collaborated with the design and logistics teams to ensure accurate and aesthetic representation of the event schedule and branding."
+        "Led the technical division, building robust platforms that successfully supported 1000+ event registrations with seamless user experience.",
+        "Delivered the Web Vida Quiz Platform featuring secure authentication and real-time functionality for 100+ live participants.",
+        "Successfully managed and coordinated 20+ technical workshops and competitive programming competitions.",
+        "Engaged and mentored 200+ students across various technical domains, fostering a collaborative learning environment."
       ]
     },
     {
       id: 2,
-      title: "Full Stack Developer",
-      company: "Tech Solutions Inc",
-      duration: "May 2024 - December 2024",
-      logo: "/api/placeholder/80/80", // Replace with your logo path
+      title: "Data Analytics Specialist",
+      company: "Deloitte Forage Virtual Experience",
+      duration: "June 2025",
+      location: "Virtual Program",
+      type: "Professional Certification",
+      logo: "📊",
       testimonial: {
-        text: "Outstanding technical skills and creative problem-solving abilities. Delivered high-quality solutions that exceeded our expectations and improved our overall development workflow significantly.",
+        text: "Successfully completed comprehensive data analytics tasks demonstrating proficiency in forensic technology and practical data analysis techniques. Showed strong analytical thinking and attention to detail in complex problem-solving scenarios.",
         rating: 5
       },
       responsibilities: [
-        "Built scalable web applications using React, Node.js, and MongoDB with focus on performance optimization.",
-        "Implemented RESTful APIs and microservices architecture to improve system scalability and maintainability.",
-        "Collaborated with cross-functional teams to deliver projects on time and within budget constraints.",
-        "Mentored junior developers and conducted code reviews to maintain high coding standards."
+        "Completed intensive practical tasks in data analysis using industry-standard tools and methodologies.",
+        "Applied forensic technology techniques to analyze complex datasets and extract meaningful insights.",
+        "Demonstrated proficiency in data visualization and reporting using advanced analytics tools.",
+        "Gained hands-on experience with Deloitte's data analytics workflow and best practices in a simulated professional environment."
       ]
     }
-    // Add more experiences as needed
   ];
 
   return (
     <section className="experience-section" ref={experienceRef}>
       <div className="experience-container">
         <div className="experience-header">
-          <p className="experience-subtitle">My Career Overview</p>
-          <h2 className="experience-title">Experience</h2>
+          <p className="experience-subtitle">Professional Journey</p>
+          <h2 className="experience-title">Work & Achievements</h2>
         </div>
         
         <div className="timeline-container">
-          <div 
-            className="timeline-line" 
-            ref={timelineRef}
-            style={{
-              '--scroll-progress': scrollProgress
-            }}
-          >
-            <div className="timeline-progress"></div>
+          <div className="timeline-line" ref={timelineRef}>
+            <div 
+              className="timeline-progress" 
+              style={{ height: `${scrollProgress * 100}%` }}
+            ></div>
           </div>
           
           <div className="experience-items">
@@ -101,8 +101,13 @@ const Experience = () => {
                     </div>
                     <p className="testimonial-text">{exp.testimonial.text}</p>
                     <div className="testimonial-footer">
-                      <img src={exp.logo} alt={`${exp.company} logo`} className="testimonial-logo" />
+                      <div className="testimonial-logo">{exp.logo}</div>
                       <span className="company-name">{exp.company}</span>
+                    </div>
+                    
+                    {/* Floating trophy in empty area */}
+                    <div className="floating-trophy">
+                      {index === 0 ? '🏆' : '🥇'}
                     </div>
                   </div>
                 </div>
@@ -114,16 +119,23 @@ const Experience = () => {
 
                 {/* Right side - Experience details */}
                 <div className="experience-details">
-                  <div className="experience-header">
+                  <div className="experience-header-details">
                     <h3 className="job-title">{exp.title}</h3>
-                    <p className="job-duration">📅 {exp.duration}</p>
+                    <div className="job-meta">
+                      <p className="job-duration">📅 {exp.duration}</p>
+                      <p className="job-location">📍 {exp.location}</p>
+                      <span className="job-type">{exp.type}</span>
+                    </div>
                   </div>
                   
                   <div className="responsibilities-section">
-                    <h4 className="responsibilities-title">Key Responsibilities</h4>
+                    <h4 className="responsibilities-title">Key Responsibilities & Achievements</h4>
                     <ul className="responsibilities-list">
                       {exp.responsibilities.map((resp, idx) => (
-                        <li key={idx}>{resp}</li>
+                        <li key={idx} className="responsibility-item">
+                          <span className="responsibility-arrow">→</span>
+                          {resp}
+                        </li>
                       ))}
                     </ul>
                   </div>
@@ -137,4 +149,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default WorkAchievements;
