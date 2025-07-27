@@ -29,6 +29,28 @@
   }
 }
 
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* Main Section */
 .experience-section {
   background: transparent;
@@ -69,6 +91,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
 }
+
 .experience-subtitle::after {
   content: '';
   position: absolute;
@@ -79,6 +102,7 @@
   height: 1px;
   background: linear-gradient(90deg, transparent, #4f8cff, transparent);
 }
+
 .experience-title {
   font-size: 3rem;
   font-weight: 900;
@@ -91,6 +115,16 @@
   background-clip: text;
   text-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
   letter-spacing: -1px;
+}
+
+/* Mobile Experience Card - Hidden by default */
+.mobile-experience-card {
+  display: none;
+}
+
+/* Desktop Layout - Visible by default */
+.desktop-layout {
+  display: contents;
 }
 
 /* Timeline Styles */
@@ -401,36 +435,506 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .experience-item {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    text-align: center;
+
+/* Tablet View (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .experience-container {
+    max-width: 900px;
+    padding: 0 30px;
   }
-  
-  .timeline-line {
+
+  .experience-item {
+    gap: 40px;
+  }
+
+  .testimonial-card {
+    max-width: 350px;
+    padding: 28px;
+  }
+
+  .experience-details {
+    max-width: 450px;
+  }
+
+  .job-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile and Small Tablet View (max-width: 768px) */
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 80px 0;
+  }
+
+  .experience-container {
+    padding: 0 16px;
+  }
+
+  .experience-header {
+    margin-bottom: 60px;
+  }
+
+  .experience-title {
+    font-size: 2.2rem;
+    letter-spacing: -0.5px;
+  }
+
+  .experience-subtitle {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    padding: 8px 16px;
+  }
+
+  /* Hide desktop layout */
+  .desktop-layout {
     display: none;
   }
-  
-  .timeline-center {
-    order: 1;
+
+  /* Show mobile layout */
+  .mobile-experience-card {
+    display: block;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 24px;
+    margin-bottom: 32px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInScale 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
-  .testimonial-side {
-    order: 2;
-    justify-content: center;
+
+  .mobile-experience-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 
+      0 16px 32px rgba(79, 140, 255, 0.15),
+      0 0 60px rgba(79, 140, 255, 0.1);
+    border-color: rgba(79, 140, 255, 0.25);
   }
-  
-  .experience-details {
-    order: 3;
+
+  /* Mobile Header */
+  .mobile-header {
+    margin-bottom: 20px;
+  }
+
+  .mobile-title-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .mobile-company-logo {
+    font-size: 40px;
+    width: 56px;
+    height: 56px;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: rgba(79, 140, 255, 0.1);
+    border: 2px solid rgba(79, 140, 255, 0.3);
+    flex-shrink: 0;
   }
-  
+
+  .mobile-title-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .mobile-job-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    color: white;
+    line-height: 1.3;
+    background: linear-gradient(45deg, #ffffff, #e8e8e8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .mobile-rating {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 4px;
+  }
+
+  .mobile-star {
+    color: #4f8cff;
+    font-size: 1.1rem;
+    filter: drop-shadow(0 0 4px rgba(79, 140, 255, 0.5));
+  }
+
+  /* Mobile Meta Info */
+  .mobile-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .mobile-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .mobile-meta-icon {
+    font-size: 1rem;
+    width: 20px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .mobile-meta-text {
+    color: #c9c9c9;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .mobile-job-type {
+    background: rgba(79, 140, 255, 0.2);
+    color: #4f8cff;
+    padding: 6px 14px;
+    border-radius: 16px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid rgba(79, 140, 255, 0.3);
+    transition: all 0.3s ease;
+    align-self: flex-start;
+  }
+
+  /* Mobile Company Name */
+  .mobile-company-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 18px;
+    text-align: center;
+    padding: 12px;
+    background: rgba(79, 140, 255, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(79, 140, 255, 0.2);
+  }
+
+  /* Mobile Testimonial */
+  .mobile-testimonial {
+    margin-bottom: 24px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    border-left: 3px solid #4f8cff;
+    position: relative;
+  }
+
+  .mobile-testimonial::before {
+    content: '"';
+    position: absolute;
+    top: -5px;
+    left: 15px;
+    font-size: 3rem;
+    color: rgba(79, 140, 255, 0.3);
+    font-family: serif;
+  }
+
+  .mobile-testimonial-text {
+    color: #e8e8e8;
+    line-height: 1.6;
+    font-style: italic;
+    font-size: 0.95rem;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Mobile Responsibilities */
+  .mobile-responsibilities {
+    position: relative;
+  }
+
+  .mobile-responsibilities-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 16px;
+    text-align: center;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(79, 140, 255, 0.3);
+    display: none;
+  }
+
+  .mobile-responsibilities-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+  }
+
+  .mobile-responsibilities-content.expanded {
+    max-height: 1000px;
+    opacity: 1;
+  }
+
+  .mobile-responsibilities-content.expanded + .mobile-read-more-btn {
+    margin-top: 20px;
+  }
+
+  .mobile-responsibilities.expanded .mobile-responsibilities-title {
+    display: block;
+    animation: slideInUp 0.4s ease-out;
+  }
+
+  .mobile-responsibilities-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mobile-responsibility-item {
+    position: relative;
+    color: #e8e8e8;
+    line-height: 1.6;
+    font-size: 0.9rem;
+    padding-left: 24px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 12px 12px 12px 28px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .mobile-responsibility-item:hover {
+    color: #4f8cff;
+    background: rgba(79, 140, 255, 0.05);
+    border-color: rgba(79, 140, 255, 0.2);
+    transform: translateX(4px);
+  }
+
+  .mobile-responsibility-arrow {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    color: #4f8cff;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .mobile-read-more-btn {
+    width: 100%;
+    background: linear-gradient(45deg, #4f8cff, #7f9ce8);
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mobile-read-more-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+  }
+
+  .mobile-read-more-btn:hover::before {
+    left: 100%;
+  }
+
+  .mobile-read-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+      0 8px 25px rgba(79, 140, 255, 0.4),
+      0 0 30px rgba(79, 140, 255, 0.2);
+  }
+
+  .mobile-read-more-btn:active {
+    transform: translateY(0);
+  }
+
+  /* Hide timeline elements on mobile */
+  .timeline-line,
+  .timeline-center {
+    display: none;
+  }
+
+  .experience-items {
+    padding: 0;
+  }
+
+  .experience-item {
+    display: block;
+    margin-bottom: 0;
+  }
+}
+
+/* Small Mobile View (max-width: 480px) */
+@media (max-width: 480px) {
+  .experience-header {
+  margin-bottom: 0.5px;
+}
+  .experience-section {
+    padding: 60px 0;
+  }
+
+  .experience-container {
+    padding: 0 12px;
+  }
+
   .experience-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
-  
-  .testimonial-card {
-    max-width: 100%;
+
+  .experience-subtitle {
+    font-size: 0.6rem;
+    letter-spacing: 1.5px;
+    padding: 6px 12px;
+  }
+
+  .mobile-experience-card {
+    padding: 20px;
+    margin-bottom: 24px;
+    border-radius: 20px;
+  }
+
+  .mobile-title-section {
+    gap: 12px;
+  }
+
+  .mobile-company-logo {
+    font-size: 32px;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+  }
+
+  .mobile-job-title {
+    font-size: 1.3rem;
+  }
+
+  .mobile-meta {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .mobile-meta-text {
+    font-size: 0.85rem;
+  }
+
+  .mobile-company-name {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .mobile-testimonial {
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .mobile-testimonial-text {
+    font-size: 0.9rem;
+  }
+
+  .mobile-responsibilities-title {
+    font-size: 1rem;
+  }
+
+  .mobile-responsibility-item {
+    font-size: 0.85rem;
+    padding: 10px 10px 10px 24px;
+  }
+
+  .mobile-responsibility-arrow {
+    left: 10px;
+    top: 10px;
+  }
+
+  .mobile-read-more-btn {
+    padding: 12px 20px;
+    font-size: 0.85rem;
+    margin-top: 16px;
+  }
+}
+
+/* Extra Small Mobile View (max-width: 360px) */
+@media (max-width: 360px) {
+    .experience-header {
+  margin-bottom: 0.5px;
+}
+  .experience-title {
+    font-size: 1.6rem;
+  }
+
+  .mobile-experience-card {
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .mobile-job-title {
+    font-size: 1.2rem;
+  }
+
+  .mobile-company-logo {
+    font-size: 28px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .mobile-meta {
+    padding: 10px;
+  }
+
+  .mobile-testimonial {
+    padding: 14px;
+  }
+
+  .mobile-responsibility-item {
+    padding: 8px 8px 8px 22px;
+  }
+}
+
+/* Dark mode and accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .mobile-experience-card {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .mobile-job-title,
+  .job-title {
+    color: white !important;
+    -webkit-text-fill-color: white !important;
+  }
+
+  .mobile-read-more-btn {
+    border: 2px solid #4f8cff;
   }
 }

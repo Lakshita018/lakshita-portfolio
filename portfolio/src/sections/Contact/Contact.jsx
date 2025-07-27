@@ -257,11 +257,11 @@ const Contact = () => {
                               </>
                             ) : submitStatus === 'success' ? (
                               <>
-                                <span>Submitted! Also mail it</span>
+                                <span>Submission Failed! Kindly mail</span>
                               </>
                             ) : submitStatus === 'failed' ? (
                               <>
-                                <span>Submitted! Also mail it</span>
+                                <span>Submission Failed! Kindly mail</span>
                               </>
                             ) : (
                               <>

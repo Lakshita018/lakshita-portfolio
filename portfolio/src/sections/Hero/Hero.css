@@ -351,3 +351,536 @@ h1 {
     transform: translateY(0);
   }
 }
+@media (min-width: 1440px) {
+  .hero {
+    padding: 100px 40px 60px;
+  }
+  
+  .hero-content {
+    max-width: 1000px;
+  }
+  
+  h1 {
+    font-size: 4.2rem;
+  }
+  
+  .typing-title {
+    font-size: 3.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 20px auto 0;
+  }
+  
+  .btn {
+    padding: 14px 36px;
+    font-size: 1.1rem;
+  }
+  
+  .bottom-bar {
+    padding: 0 60px;
+    bottom: 40px;
+  }
+}
+
+/* Desktop Screens (1024px - 1439px) */
+@media (max-width: 1439px) and (min-width: 1024px) {
+  .hero {
+    padding: 80px 30px 50px;
+  }
+  
+  .hero-content {
+    max-width: 900px;
+  }
+  
+  h1 {
+    font-size: 3.8rem;
+  }
+  
+  .typing-title {
+    font-size: 3.2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .bottom-bar {
+    padding: 0 50px;
+  }
+}
+
+/* Tablet Landscape (768px - 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .hero {
+    padding: 60px 30px 40px;
+    height: 100vh;
+  }
+  
+  .hero-content {
+    max-width: 700px;
+  }
+  
+  h1 {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .typing-title {
+    font-size: 2.6rem;
+    margin-top: 1rem;
+    border-right-width: 2px;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+  
+  .hero-buttons {
+    margin-top: 40px;
+    gap: 20px;
+  }
+  
+  .btn {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+  }
+  
+  .bottom-bar {
+    padding: 0 40px;
+    bottom: 25px;
+  }
+  
+  .pill-social-icons {
+    padding: 6px 14px;
+    gap: 6px;
+  }
+  
+  .pill-social-icons a {
+    padding: 8px;
+  }
+  
+  .pill-social-icons svg {
+    font-size: 1.4rem;
+  }
+  
+  .scroll-down {
+    font-size: 0.75rem;
+  }
+  
+  .mouse {
+    width: 22px;
+    height: 36px;
+  }
+}
+
+/* Tablet Portrait (481px - 767px) */
+@media (max-width: 767px) and (min-width: 481px) {
+  .hero {
+    padding: 40px 25px 30px;
+    height: 100vh;
+    min-height: 600px;
+  }
+  
+  .hero-content {
+    max-width: 500px;
+  }
+  
+  .tagline {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+    margin-bottom: 15px;
+  }
+  
+  h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+  
+  .typing-title {
+    font-size: 2.2rem;
+    margin-top: 0.8rem;
+    border-right-width: 2px;
+    white-space: normal;
+    overflow: visible;
+    animation: none;
+    border-right: none;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 15px;
+    padding: 0 15px;
+  }
+  
+  .hero-buttons {
+    margin-top: 30px;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    padding: 12px 32px;
+    font-size: 0.9rem;
+    min-width: 140px;
+  }
+  
+  .bottom-bar {
+    padding: 0 25px;
+    bottom: 20px;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  
+  .pill-social-icons {
+    padding: 8px 16px;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .pill-social-icons a {
+    padding: 10px;
+  }
+  
+  .pill-social-icons svg {
+    font-size: 1.3rem;
+  }
+  
+  .scroll-down {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    font-size: 0.7rem;
+  }
+  
+  .mouse {
+    width: 20px;
+    height: 32px;
+    margin: 8px auto 0;
+  }
+  
+  .wheel {
+    width: 3px;
+    height: 6px;
+  }
+}
+
+/* Mobile Landscape (376px - 480px) */
+@media (max-width: 480px) and (min-width: 376px) and (orientation: landscape) {
+  .hero {
+    padding: 20px 20px 15px;
+    height: 100vh;
+    min-height: 500px;
+  }
+  
+  .hero-content {
+    max-width: 90%;
+  }
+  
+  .tagline {
+    font-size: 0.8rem;
+    padding: 6px 16px;
+    margin-bottom: 10px;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  
+  .typing-title {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    white-space: normal;
+    overflow: visible;
+    animation: none;
+    border-right: none;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    margin-top: 10px;
+    padding: 0 10px;
+  }
+  
+  .hero-buttons {
+    margin-top: 20px;
+    gap: 12px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .btn {
+    padding: 10px 24px;
+    font-size: 0.85rem;
+    min-width: 120px;
+  }
+  
+  .bottom-bar {
+    padding: 0 20px;
+    bottom: 15px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .pill-social-icons {
+    padding: 6px 12px;
+    gap: 6px;
+  }
+  
+  .pill-social-icons a {
+    padding: 8px;
+  }
+  
+  .pill-social-icons svg {
+    font-size: 1.2rem;
+  }
+  
+  .scroll-down {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.65rem;
+  }
+  
+  .mouse {
+    width: 18px;
+    height: 28px;
+    margin: 6px auto 0;
+  }
+}
+
+/* Mobile Portrait (320px - 480px) */
+@media (max-width: 480px) and (orientation: portrait) {
+  .hero {
+    padding: 30px 20px 25px;
+    height: 100vh;
+    min-height: 600px;
+  }
+  
+  .hero-content {
+    max-width: 95%;
+  }
+  
+  .tagline {
+    font-size: 0.85rem;
+    padding: 8px 18px;
+    margin-bottom: 12px;
+  }
+  
+  h1 {
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  
+  .typing-title {
+    font-size: 2rem;
+    margin-top: 0.6rem;
+    white-space: normal;
+    overflow: visible;
+    animation: none;
+    border-right: none;
+    display: block;
+  }
+  
+  .subtitle {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-top: 12px;
+    padding: 0 10px;
+  }
+  
+  .hero-buttons {
+   margin-top: 25px;
+   gap: 12px;
+   flex-direction: row;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+ 
+ .btn {
+   padding: 12px 24px;
+   font-size: 0.9rem;
+   min-width: 130px;
+   flex: 1;
+   max-width: 140px;
+ }
+ 
+ .bottom-bar {
+   padding: 0 20px;
+   bottom: 20px;
+   flex-direction: column;
+   align-items: center;
+   gap: 90px;
+ }
+ 
+ .pill-social-icons {
+   order: 1;
+   padding: 8px 16px;
+   gap: 8px;
+ }
+ 
+ .scroll-down {
+   order: 2;
+   position: relative;
+   bottom: auto;
+   left: auto;
+   transform: none;
+   font-size: 0.7rem;
+ }
+  
+  .mouse {
+    width: 20px;
+    height: 32px;
+    margin: 8px auto 0;
+  }
+  
+  .wheel {
+    width: 3px;
+    height: 6px;
+  }
+}
+
+/* Small Mobile (320px and below) */
+@media (max-width: 320px) {
+  .hero {
+    padding: 25px 15px 20px;
+    height: 100vh;
+    min-height: 580px;
+  }
+  
+  .hero-content {
+    max-width: 100%;
+  }
+  
+  .tagline {
+    font-size: 0.8rem;
+    padding: 6px 15px;
+    margin-bottom: 10px;
+  }
+  
+  h1 {
+    font-size: 2.1rem;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  
+  .typing-title {
+    font-size: 1.7rem;
+    margin-top: 0.5rem;
+    white-space: normal;
+    overflow: visible;
+    animation: none;
+    border-right: none;
+    display: block;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    margin-top: 10px;
+    padding: 0 5px;
+  }
+  
+  .hero-buttons {
+   margin-top: 20px;
+   gap: 10px;
+   flex-direction: row;
+   justify-content: center;
+ }
+ 
+ .btn {
+   padding: 10px 20px;
+   font-size: 0.85rem;
+   min-width: 120px;
+   flex: 1;
+   max-width: 130px;
+ }
+ 
+ .bottom-bar {
+   padding: 0 15px;
+   bottom: 15px;
+   flex-direction: column;
+   align-items: center;
+   gap: 100px;
+ }
+ .pill-social-icons {
+   order: 1;
+   padding: 6px 14px;
+   gap: 6px;
+ }
+ 
+ .scroll-down {
+   order: 2;
+   position: relative;
+   bottom: auto;
+   left: auto;
+   transform: none;
+   font-size: 0.65rem;
+ }
+  
+  .mouse {
+    width: 18px;
+    height: 28px;
+    margin: 6px auto 0;
+  }
+  
+  .wheel {
+    width: 2px;
+    height: 5px;
+  }
+}
+
+/* High DPI / Retina Adjustments */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .highlight::after {
+    height: 1px;
+  }
+  
+  .typing-title {
+    border-right-width: 2px;
+  }
+  
+  .mouse {
+    border-width: 1px;
+  }
+}
+
+/* Reduce Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .typing-title {
+    animation: none;
+    border-right: none;
+  }
+  
+  .jump {
+    animation: none;
+  }
+  
+  .wheel {
+    animation: none;
+  }
+  
+  .btn, .tagline, .pill-social-icons a {
+    transition: none;
+  }
+  
+  .highlight::after {
+    transition: none;
+  }
+}

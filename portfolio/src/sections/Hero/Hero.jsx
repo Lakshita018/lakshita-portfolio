@@ -4,6 +4,15 @@ import NeuralNetworkBG from "../../components/NeuralNetworkBG";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import HeroTypingAnimation from "../../components/HeroTypingAnimation";
 
+const handleScrollToProjects = () => {
+  const projectsSection = document.getElementById('projects');
+  if (projectsSection) {
+    projectsSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+};
 const Hero = () => {
   const [showIcons, setShowIcons] = useState(true);
   const heroRef = useRef(null);
@@ -50,12 +59,12 @@ const Hero = () => {
   </div>
 
   <div className="bottom-bar">
-    <div className="scroll-down">
-      <span className="jump">Scroll Down</span>
-      <div className="mouse">
-        <div className="wheel"></div>
-      </div>
-    </div>
+    <div className="scroll-down" onClick={handleScrollToProjects}>
+  <span className="jump">Scroll Down</span>
+  <div className="mouse">
+    <div className="wheel"></div>
+  </div>
+</div>
 
     {showIcons && (
       <div className="pill-social-icons">
