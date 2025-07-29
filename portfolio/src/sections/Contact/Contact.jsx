@@ -25,65 +25,37 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+ const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    const newErrors = { email: '', phone: '' };
-    let hasError = false;
+  const newErrors = { email: '', phone: '' };
+  let hasError = false;
 
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address.';
-      hasError = true;
-    }
-
-    if (!/^\d{10}$/.test(formData.phone)) {
-      newErrors.phone = 'Please enter a valid 10-digit phone number.';
-      hasError = true;
-    }
-
-    if (hasError) {
-      setErrors(newErrors);
-      return;
-    }
-
-    setErrors({ email: '', phone: '' });
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch('http://localhost:5000/api/contact', {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          firstName: formData.firstName,
-          lastName: formData.lastName,
-          email: formData.email,
-          message: formData.message,
-          contact: formData.phone,
-        }),
-      });
-
-      const data = await response.json();
-
-
-      if (!response.ok) {
-      setSubmitStatus('failed');
-    } else {
-      setSubmitStatus('success');
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        message: ''
-      });
-    }
-  } catch (error) {
-    setSubmitStatus('failed');
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+    newErrors.email = 'Please enter a valid email address.';
+    hasError = true;
   }
 
-  setIsSubmitting(false);
+  if (!/^\d{10}$/.test(formData.phone)) {
+    newErrors.phone = 'Please enter a valid 10-digit phone number.';
+    hasError = true;
+  }
+
+  if (hasError) {
+    setErrors(newErrors);
+    return;
+  }
+
+  // Clear errors and show submitting state
+  setErrors({ email: '', phone: '' });
+  setIsSubmitting(true);
+  setSubmitStatus('');
+
+  // ✅ Fake a delay for 2 seconds
+  setTimeout(() => {
+    setIsSubmitting(false);
+    setSubmitStatus('failed');
+  }, 2000);
 };
 
 
