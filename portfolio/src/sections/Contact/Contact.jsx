@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
@@ -25,7 +26,7 @@ const Contact = () => {
     }));
   };
 
- const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
   e.preventDefault();
 
   const newErrors = { email: '', phone: '' };
@@ -46,17 +47,43 @@ const Contact = () => {
     return;
   }
 
-  // Clear errors and show submitting state
   setErrors({ email: '', phone: '' });
   setIsSubmitting(true);
   setSubmitStatus('');
 
-  // ✅ Fake a delay for 2 seconds
-  setTimeout(() => {
-    setIsSubmitting(false);
+  const templateParams = {
+    first_name: formData.firstName,
+    last_name: formData.lastName,
+    email: formData.email,
+    phone: formData.phone,
+    message: formData.message,
+  };
+
+  try {
+    await emailjs.send(
+      "service_0u99jdq",
+      "template_plfrh6z",
+      templateParams,
+      "KtfPI2-pHUI1ZU6nL"
+    );
+
+    setSubmitStatus('success');
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      message: ''
+    });
+
+  } catch (error) {
     setSubmitStatus('failed');
-  }, 2000);
+    console.error(error);
+  }
+
+  setIsSubmitting(false);
 };
+
 
 
   return (
@@ -229,7 +256,7 @@ const Contact = () => {
                               </>
                             ) : submitStatus === 'success' ? (
                               <>
-                                <span>Submission Failed! Kindly mail</span>
+                                <span>Message Sent Successfully!</span>
                               </>
                             ) : submitStatus === 'failed' ? (
                               <>
