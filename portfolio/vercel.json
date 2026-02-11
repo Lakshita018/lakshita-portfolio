@@ -1,9 +1,0 @@
-{
-  "buildCommand": "rm -rf dist && npm run build",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
-}
