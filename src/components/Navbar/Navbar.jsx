@@ -40,7 +40,7 @@ const Navbar = () => {
         </nav>
         
         <div className="navbar__resume">
-          <a href="/Lakshita_resume.pdf" download className="download-btn">
+          <a href="/my_resume.pdf" download className="download-btn">
             Resume
           </a>
         </div>
