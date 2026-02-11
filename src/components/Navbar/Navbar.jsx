@@ -122,7 +122,7 @@ const Navbar = () => {
           
           <div className="mobile-menu__footer">
             <a 
-              href="/Lakshita_resume.pdf" 
+              href="/my_resume.pdf" 
               download 
               className="mobile-download-btn"
               onClick={closeMenu}
